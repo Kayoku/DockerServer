@@ -60,7 +60,7 @@ services:
     image: collabora/code
     container_name: collab
     environment:
-      - domain={DOMAIN_NEXTCLOUD}
+      - 'domain={DOMAIN_NEXTCLOUD_WITH_DOUBLE_BACKSLASH}'
     cap_add:
       - MKNOD
     networks:
