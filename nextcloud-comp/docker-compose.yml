@@ -1,3 +1,20 @@
+# Need to be configured with:
+# DOMAIN_NEXTCLOUD:
+#   Domain name of the nextcloud
+#   ex: nextcloud.mydomain.com,nextcloud.mydomain2.com
+# EMAIL_NEXTCLOUD:
+#   Mail for SSL encryption
+#   ex: myemail@mail.com
+# MARIA_ROOT_PASSWORD:
+#   Root password for mariadb
+#   ex: my_s3cret
+# MARIA_DB_PASSWORD:
+#   DB password for mariadb
+#   ex: my_s3cret
+# DOMAIN_NEXTCLOUD_WITH_DOUBLE_BACKSLASH:
+#   domain accepted by collabora
+#   ex: nextcloud\\.mydomain\\.com
+
 version: '3'
 
 services:
@@ -39,10 +56,10 @@ services:
     volumes:
       - ../../nextcloud/db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD={ROOT_PASSWORD}
+      - MYSQL_ROOT_PASSWORD={MARIA_ROOT_PASSWORD}
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD={MYSQL_PASSWORD}
+      - MYSQL_PASSWORD={MARIA_DB_PASSWORD}
     networks:
       - proxy-tier
     restart: unless-stopped
