@@ -1,5 +1,31 @@
 # DockerServer
 
+# With a new clean debian 9 server
+
+```
+# https://docs.ovh.com/fr/dedicated/securiser-un-serveur-dedie/
+
+# Update server
+sudo apt-get update
+sudo apt-get upgrade
+
+# Install dependencies
+sudo apt-get install nginx-full mariadb-server mariadb-client curl git
+
+# Get docker & docker-compose
+curl -fsSL https://get.docker.com/ | sh
+sudo usermod -aG docker jordan
+sudo apt-get install docker-compose
+
+# Clone this repository
+git clone https://github.com/Kayoku/DockerServer
+cd DockerServer
+mkdir -p ../nextcloud/config/ && cp apcu.config.php ../nextcloud/config/
+./run.sh
+
+# create admin user & db connexion
+```
+
 # Todo
 
 - Fichier contenant les données sensibles crypté ?
