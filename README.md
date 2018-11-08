@@ -10,7 +10,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # Install dependencies
-sudo apt-get install nginx-full mariadb-server mariadb-client curl git
+sudo apt-get install nginx-full mariadb-server mariadb-client curl git openssl
 
 # Get docker & docker-compose
 curl -fsSL https://get.docker.com/ | sh
@@ -20,7 +20,7 @@ sudo apt-get install docker-compose
 # Clone this repository
 git clone https://github.com/Kayoku/DockerServer
 cd DockerServer
-mkdir -p ../nextcloud/config/ && cp ./config/apcu.config.php ../nextcloud/config/
+mkdir -p ./nextcloud/config/ && cp ./base/config/apcu.config.php ./nextcloud/config/
 ./run.sh
 
 # create admin user & db connexion

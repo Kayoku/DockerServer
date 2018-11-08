@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./generate.sh
 docker network create nginx-proxy
 
 cd proxy-comp
