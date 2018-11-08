@@ -20,7 +20,7 @@ sudo apt-get install docker-compose
 # Clone this repository
 git clone https://github.com/Kayoku/DockerServer
 cd DockerServer
-mkdir -p ../nextcloud/config/ && cp apcu.config.php ../nextcloud/config/
+mkdir -p ../nextcloud/config/ && cp ./config/apcu.config.php ../nextcloud/config/
 ./run.sh
 
 # create admin user & db connexion
