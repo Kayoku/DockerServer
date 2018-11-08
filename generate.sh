@@ -11,3 +11,6 @@ cp -R ./base/nextcloud-comp ./generate
 cp -R ./base/proxy-comp ./generate
 
 # Decrypt config and change docker-compose param
+cd ./base/private/
+./decrypt.sh
+cd -
