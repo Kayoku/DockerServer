@@ -28,10 +28,6 @@ mkdir -p ./nextcloud/config/ && cp ./base/config/apcu.config.php ./nextcloud/con
 
 # Todo
 
-- Fichier contenant les données sensibles crypté ?
-  - Faire un fichier contenant les infos sensibles => Avec macro (exemple: MDP_MARIADB = xxxyyyxxx)
-  - Script de cryptage / decryptage avec AES 256 : https://angristan.fr/chiffrer-fichier-openssl-linux/
-
 - Ajouter le website hugo dans le conteneur web nginx
 - Ajouter un système de monitoring docker
 
