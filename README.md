@@ -28,6 +28,7 @@ mkdir -p ./nextcloud/config/ && cp ./base/config/apcu.config.php ./nextcloud/con
 
 # Todo
 
+- Fix bug avec les "\"
 - Ajouter le website hugo dans le conteneur web nginx
 - Ajouter un système de monitoring docker
 
