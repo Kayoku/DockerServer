@@ -33,3 +33,15 @@ mkdir -p ./nextcloud/config/ && cp ./base/config/apcu.config.php ./nextcloud/con
 
 - Créer système de backup sécurisé. 
 (1 fois par semaine, dimanche 3h du matin, tous les sites "maintenance backup", récupération des fichiers, cryptage, envoie vers le serveur de sauvegarde, decryptage, suppression du moins récent backup de façon a n'en garder que x)
+
+# Help
+
+## Collabora not working
+
+Collab need few minutes for initialization. You can watch the detail with this command:
+
+	docker logs collab
+
+When it finished, if you can't open a Libreoffice document, just restart the doc.
+
+	docker restart collab
