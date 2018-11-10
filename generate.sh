@@ -22,5 +22,5 @@ fi
 while read line
 do
 	IFS== read name value <<< $line
-	for i in ./generate/nextcloud-comp/docker-compose.yml; do sed -i "s/$name/$value/g" "$i"; done
+	for i in ./generate/nextcloud-comp/docker-compose.yml; do sed -i "s:$name:$value:g" "$i"; done
 done < ./base/private/config.txt
